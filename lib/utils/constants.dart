@@ -1,3 +1,3 @@
 class Constants {
-  static String uri = 'http://192.168.8.100:5000/api/v1';
+  static String uri = 'http://localhost:5000/api/v1';
 }

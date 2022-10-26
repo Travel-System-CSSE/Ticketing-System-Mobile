@@ -16,8 +16,13 @@ class HomeScreen extends StatelessWidget {
     final user = Provider.of<UserProvider>(context).user;
 
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Home'),
+        centerTitle: true,
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
+          padding: const EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [

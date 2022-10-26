@@ -4,10 +4,10 @@ import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:ticketing_system/providers/user_provider.dart';
-import 'package:ticketing_system/screens/home_screen.dart';
 import 'package:ticketing_system/screens/login_screen.dart';
 import 'package:ticketing_system/utils/constants.dart';
 import 'package:ticketing_system/utils/utils.dart';
+import 'package:ticketing_system/widgets/common/root_navigation.dart';
 
 class AuthService {
   //! Sign Up User
@@ -44,7 +44,7 @@ class AuthService {
           await prefs.setString('userData', res.body);
           navigator.pushAndRemoveUntil(
             MaterialPageRoute(
-              builder: (context) => const HomeScreen(),
+              builder: (context) => const RootNavigation(),
             ),
             (route) => false,
           );
@@ -85,7 +85,7 @@ class AuthService {
           await prefs.setString('userData', res.body);
           navigator.pushAndRemoveUntil(
             MaterialPageRoute(
-              builder: (context) => const HomeScreen(),
+              builder: (context) => const RootNavigation(),
             ),
             (route) => false,
           );
