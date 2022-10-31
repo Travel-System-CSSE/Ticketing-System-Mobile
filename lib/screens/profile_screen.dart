@@ -46,48 +46,50 @@ class ProfileScreen extends StatelessWidget {
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
-        child: Column(
-          children: [
-            UserAttribute(
-              attributeName: 'Name',
-              attributeValue: user.name,
-            ),
-            UserAttribute(
-              attributeName:
-                  user.role == 'local' ? 'NIC Number' : 'Passport Number',
-              attributeValue: user.idNumber,
-            ),
-            UserAttribute(
-              attributeName: 'Role',
-              attributeValue: '${user.role} User'.capitalize(),
-            ),
-            const Divider(),
-            OptionTile(
-              leadingIcon: Icons.password_rounded,
-              title: 'Update Password',
-              trailingIcon: Icons.arrow_forward_ios,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => UpdatePasswordScreen(),
-                  ),
-                );
-              },
-            ),
-            OptionTile(
-              leadingIcon: Icons.no_accounts,
-              title: 'Delete Account',
-              trailingIcon: Icons.arrow_forward_ios,
-              onTap: () => deleteUser(context),
-            ),
-            OptionTile(
-              leadingIcon: Icons.logout_rounded,
-              title: 'Log out',
-              trailingIcon: Icons.arrow_forward_ios,
-              onTap: () => signOutUser(context),
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              UserAttribute(
+                attributeName: 'Name',
+                attributeValue: user.name,
+              ),
+              UserAttribute(
+                attributeName:
+                    user.role == 'local' ? 'NIC Number' : 'Passport Number',
+                attributeValue: user.idNumber,
+              ),
+              UserAttribute(
+                attributeName: 'Role',
+                attributeValue: '${user.role} User'.capitalize(),
+              ),
+              const Divider(),
+              OptionTile(
+                leadingIcon: Icons.password_rounded,
+                title: 'Update Password',
+                trailingIcon: Icons.arrow_forward_ios,
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => UpdatePasswordScreen(),
+                    ),
+                  );
+                },
+              ),
+              OptionTile(
+                leadingIcon: Icons.no_accounts,
+                title: 'Delete Account',
+                trailingIcon: Icons.arrow_forward_ios,
+                onTap: () => deleteUser(context),
+              ),
+              OptionTile(
+                leadingIcon: Icons.logout_rounded,
+                title: 'Log out',
+                trailingIcon: Icons.arrow_forward_ios,
+                onTap: () => signOutUser(context),
+              ),
+            ],
+          ),
         ),
       ),
     );

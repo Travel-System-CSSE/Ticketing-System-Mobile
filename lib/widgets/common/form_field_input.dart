@@ -68,6 +68,9 @@ class FormFieldInput extends StatelessWidget {
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(24),
+                borderSide: const BorderSide(
+                  color: buttonColor,
+                ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide: const BorderSide(

@@ -26,46 +26,44 @@ class UpdatePasswordScreen extends StatelessWidget {
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
-        child: Form(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                FormFieldInput(
-                  controller: _oldPasswordController,
-                  label: 'Current Password',
-                  hintText: 'current password',
-                  withAsterisk: true,
-                  textInputType: TextInputType.text,
-                  isPass: true,
-                ),
-                FormFieldInput(
-                  controller: _newPasswordController,
-                  label: 'New Password',
-                  hintText: 'new password',
-                  withAsterisk: true,
-                  textInputType: TextInputType.text,
-                  isPass: true,
-                ),
-                const SizedBox(height: 24),
-                ElevatedButton(
-                  onPressed: () => updateUserPassword(context),
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(double.infinity, 48),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(24),
-                    ),
-                    backgroundColor: buttonColor,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              FormFieldInput(
+                controller: _oldPasswordController,
+                label: 'Current Password',
+                hintText: 'current password',
+                withAsterisk: true,
+                textInputType: TextInputType.text,
+                isPass: true,
+              ),
+              FormFieldInput(
+                controller: _newPasswordController,
+                label: 'New Password',
+                hintText: 'new password',
+                withAsterisk: true,
+                textInputType: TextInputType.text,
+                isPass: true,
+              ),
+              const SizedBox(height: 24),
+              ElevatedButton(
+                onPressed: () => updateUserPassword(context),
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(double.infinity, 48),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(24),
                   ),
-                  child: Text(
-                    'Update Password',
-                    style: GoogleFonts.urbanist(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                    ),
+                  backgroundColor: buttonColor,
+                ),
+                child: Text(
+                  'Update Password',
+                  style: GoogleFonts.urbanist(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
