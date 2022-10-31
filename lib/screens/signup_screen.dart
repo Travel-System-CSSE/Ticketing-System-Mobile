@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ticketing_system/widgets/Signup/usertype_card.dart';
 import 'package:ticketing_system/widgets/common/custom_textfield.dart';
 import 'package:ticketing_system/screens/login_screen.dart';
@@ -44,18 +45,21 @@ class _SignupScreenState extends State<SignupScreen> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     const Spacer(),
-                    const Text(
+                    Text(
                       "Sign Up",
-                      style:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                      style: GoogleFonts.urbanist(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
                     const SizedBox(height: 24),
-                    const Text(
+                    Text(
                       "Choose account type",
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          letterSpacing: 1),
+                      style: GoogleFonts.urbanist(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        letterSpacing: 0.5,
+                      ),
                     ),
                     const SizedBox(height: 12),
                     Row(
@@ -122,9 +126,13 @@ class _SignupScreenState extends State<SignupScreen> {
                           ),
                         ),
                       ),
-                      child: const Text(
+                      child: Text(
                         "Sign Up",
-                        style: TextStyle(color: Colors.white, fontSize: 16),
+                        style: GoogleFonts.urbanist(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ),
                     const Spacer(flex: 2),

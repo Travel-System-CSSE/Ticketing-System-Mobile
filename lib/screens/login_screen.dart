@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ticketing_system/screens/signup_screen.dart';
 import 'package:ticketing_system/widgets/common/custom_textfield.dart';
 import 'package:ticketing_system/services/auth_services.dart';
@@ -37,9 +38,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Spacer(),
-                  const Text(
+                  Text(
                     "Sign In",
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    style: GoogleFonts.urbanist(
+                      fontSize: 24,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                   SizedBox(height: MediaQuery.of(context).size.height * 0.08),
                   CustomTextField(
@@ -69,9 +73,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                     ),
-                    child: const Text(
+                    child: Text(
                       "Sign in",
-                      style: TextStyle(color: Colors.white, fontSize: 16),
+                      style: GoogleFonts.urbanist(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                   const Spacer(),
