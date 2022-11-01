@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ticketing_system/utils/colors.dart';
 
 class UserTypeCard extends StatelessWidget {
   final String role;
@@ -22,7 +23,7 @@ class UserTypeCard extends StatelessWidget {
             right: -4,
             child: CircleAvatar(
               radius: 16,
-              backgroundColor: Colors.blue,
+              backgroundColor: buttonColor,
               child: Icon(
                 Icons.done_rounded,
                 color: Colors.white,
@@ -34,7 +35,7 @@ class UserTypeCard extends StatelessWidget {
           height: 165,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: Colors.blue, width: 1),
+            border: Border.all(color: buttonColor, width: 1),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

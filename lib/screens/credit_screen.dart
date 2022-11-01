@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ticketing_system/utils/colors.dart';
 
 class CreditScreen extends StatelessWidget {
   const CreditScreen({super.key});
@@ -8,6 +9,7 @@ class CreditScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Credits'),
+        backgroundColor: darkYellow,
         centerTitle: true,
       ),
     );

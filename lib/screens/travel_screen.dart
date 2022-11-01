@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ticketing_system/utils/colors.dart';
 
 class TravelScreen extends StatelessWidget {
   const TravelScreen({super.key});
@@ -8,6 +9,7 @@ class TravelScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Travels History'),
+        backgroundColor: darkYellow,
         centerTitle: true,
       ),
     );

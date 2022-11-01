@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ticketing_system/utils/colors.dart';
 
 class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
@@ -19,29 +20,37 @@ class CustomTextField extends StatelessWidget {
       controller: controller,
       decoration: InputDecoration(
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(
             color: Colors.transparent,
             width: 0,
           ),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(
-            color: Colors.grey,
+            color: buttonColor,
             width: 1,
+          ),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: const BorderSide(
+            color: buttonColor,
+            width: 2,
           ),
         ),
         contentPadding: const EdgeInsets.symmetric(
           horizontal: 16,
-          vertical: 14,
+          vertical: 0,
         ),
         filled: true,
-        fillColor: const Color(0xffF5F6FA),
+        fillColor: textContainerColor,
         hintText: label,
         hintStyle: GoogleFonts.urbanist(
-          fontSize: 14,
+          fontSize: 15,
           fontWeight: FontWeight.w500,
+          color: greyTextColor,
         ),
       ),
       obscureText: isPass,

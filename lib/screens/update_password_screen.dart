@@ -23,6 +23,7 @@ class UpdatePasswordScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Update Password'),
+        backgroundColor: darkYellow,
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),

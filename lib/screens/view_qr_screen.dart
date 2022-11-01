@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:ticketing_system/providers/user_provider.dart';
+import 'package:ticketing_system/utils/colors.dart';
 
 class ViewQrScreen extends StatelessWidget {
   const ViewQrScreen({super.key});
@@ -13,6 +14,7 @@ class ViewQrScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('QR Code'),
+        backgroundColor: darkYellow,
         centerTitle: true,
       ),
       body: Container(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ticketing_system/utils/colors.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -8,6 +9,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home'),
+        backgroundColor: darkYellow,
         centerTitle: true,
       ),
       body: SafeArea(

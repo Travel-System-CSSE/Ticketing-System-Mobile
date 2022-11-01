@@ -40,7 +40,7 @@ class _MyAppState extends State<MyApp> {
       title: 'Ticketing System',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
       ),
       home: Provider.of<UserProvider>(context).user.token.isEmpty
           ? const SignupScreen()

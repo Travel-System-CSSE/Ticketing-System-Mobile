@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ticketing_system/utils/colors.dart';
 import 'package:ticketing_system/utils/global_variables.dart';
 
 class RootNavigation extends StatefulWidget {
@@ -45,40 +46,42 @@ class _RootNavigationState extends State<RootNavigation> {
         children: homeScreenItems,
       ),
       bottomNavigationBar: CupertinoTabBar(
+        currentIndex: _page,
         backgroundColor: Colors.white,
+        activeColor: darkYellow,
         items: [
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
-              color: _page == 0 ? Colors.blue : Colors.blueGrey,
+              color: _page == 0 ? darkYellow : Colors.blueGrey,
             ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.account_balance_rounded,
-              color: _page == 1 ? Colors.blue : Colors.blueGrey,
+              color: _page == 1 ? darkYellow : Colors.blueGrey,
             ),
             label: 'Credits',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.qr_code_scanner_rounded,
-              color: _page == 2 ? Colors.blue : Colors.blueGrey,
+              color: _page == 2 ? darkYellow : Colors.blueGrey,
             ),
             label: 'QR Code',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.travel_explore_rounded,
-              color: _page == 3 ? Colors.blue : Colors.blueGrey,
+              color: _page == 3 ? darkYellow : Colors.blueGrey,
             ),
             label: 'Travel History',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.account_circle,
-              color: _page == 4 ? Colors.blue : Colors.blueGrey,
+              color: _page == 4 ? darkYellow : Colors.blueGrey,
             ),
             label: 'Profile',
           ),

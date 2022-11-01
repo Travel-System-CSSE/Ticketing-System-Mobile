@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ticketing_system/utils/colors.dart';
 import 'package:ticketing_system/widgets/Signup/usertype_card.dart';
 import 'package:ticketing_system/widgets/common/custom_textfield.dart';
 import 'package:ticketing_system/screens/login_screen.dart';
@@ -112,7 +113,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     ElevatedButton(
                       onPressed: signupUser,
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(Colors.blue),
+                        backgroundColor: MaterialStateProperty.all(buttonColor),
                         textStyle: MaterialStateProperty.all(
                           const TextStyle(color: Colors.white),
                         ),
@@ -140,14 +141,14 @@ class _SignupScreenState extends State<SignupScreen> {
                       text: TextSpan(
                         text: 'Do you have an account?',
                         style: const TextStyle(
-                          color: Colors.grey,
+                          color: greyTextColor,
                           fontWeight: FontWeight.w500,
                         ),
                         children: [
                           TextSpan(
                             text: ' Sign in',
                             style: const TextStyle(
-                              color: Colors.blue,
+                              color: buttonColor,
                             ),
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {

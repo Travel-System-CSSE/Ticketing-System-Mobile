@@ -4,6 +4,7 @@ import 'package:ticketing_system/providers/user_provider.dart';
 import 'package:ticketing_system/screens/update_password_screen.dart';
 import 'package:ticketing_system/services/auth_services.dart';
 import 'package:ticketing_system/services/user_services.dart';
+import 'package:ticketing_system/utils/colors.dart';
 import 'package:ticketing_system/utils/utils.dart';
 import 'package:ticketing_system/widgets/profile/optionsTile.dart';
 import 'package:ticketing_system/widgets/profile/user_attribute.dart';
@@ -42,6 +43,7 @@ class ProfileScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text('Profile'),
+        backgroundColor: darkYellow,
         centerTitle: true,
       ),
       body: Container(
