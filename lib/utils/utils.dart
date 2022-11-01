@@ -3,9 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 
-void showSnackBar(BuildContext context, String text) {
+void showSnackBar(BuildContext context, String text, {int status = -1}) {
   ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
+      backgroundColor: status == 1
+          ? Colors.green
+          : status == 0
+              ? Colors.red
+              : null,
       content: Text(text),
     ),
   );
@@ -24,16 +29,16 @@ void httpErrorHandle({
       onSuccess();
       break;
     case 400:
-      showSnackBar(context, jsonDecode(response.body)['msg']);
+      showSnackBar(context, jsonDecode(response.body)['msg'], status: 0);
       break;
     case 401:
-      showSnackBar(context, jsonDecode(response.body)['msg']);
+      showSnackBar(context, jsonDecode(response.body)['msg'], status: 0);
       break;
     case 500:
-      showSnackBar(context, jsonDecode(response.body)['msg']);
+      showSnackBar(context, jsonDecode(response.body)['msg'], status: 0);
       break;
     default:
-      showSnackBar(context, response.body);
+      showSnackBar(context, response.body, status: 0);
   }
 }
 

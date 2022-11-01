@@ -35,11 +35,11 @@ class UserService {
         response: res,
         context: context,
         onSuccess: () async {
-          showSnackBar(context, json.decode(res.body)['msg']);
+          showSnackBar(context, json.decode(res.body)['msg'], status: 1);
         },
       );
     } catch (e) {
-      showSnackBar(context, e.toString());
+      showSnackBar(context, e.toString(), status: 0);
     }
   }
 
@@ -72,7 +72,7 @@ class UserService {
         },
       );
     } catch (e) {
-      showSnackBar(context, e.toString());
+      showSnackBar(context, e.toString(), status: 0);
     }
   }
 }

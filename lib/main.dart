@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:provider/provider.dart';
 import 'package:ticketing_system/providers/user_provider.dart';
-import 'package:ticketing_system/screens/home_screen.dart';
 import 'package:ticketing_system/screens/signup_screen.dart';
 import 'package:ticketing_system/services/auth_services.dart';
 import 'package:ticketing_system/widgets/common/root_navigation.dart';
 
-void main() {
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: '.env');
+  Stripe.publishableKey =
+      'pk_test_51LzQlJD1dVzqQ9BqX57N9LsU0Omb3LYSBtIkzOmnkfJVERecmJQ6o3BnTQhR2auPeibm08EmtwLEZuwQPcDu8Nrf000JOGJShW';
   runApp(
     MultiProvider(
       providers: [

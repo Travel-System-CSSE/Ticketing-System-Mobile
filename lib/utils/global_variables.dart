@@ -7,7 +7,7 @@ import 'package:ticketing_system/screens/view_qr_screen.dart';
 
 List<Widget> homeScreenItems = [
   const HomeScreen(),
-  const CreditScreen(),
+  CreditScreen(),
   const ViewQrScreen(),
   const TravelScreen(),
   const ProfileScreen(),

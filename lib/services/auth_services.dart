@@ -51,7 +51,7 @@ class AuthService {
         },
       );
     } catch (e) {
-      showSnackBar(context, e.toString());
+      showSnackBar(context, e.toString(), status: 0);
     }
   }
 
@@ -92,7 +92,7 @@ class AuthService {
         },
       );
     } catch (e) {
-      showSnackBar(context, e.toString());
+      showSnackBar(context, e.toString(), status: 0);
     }
   }
 
@@ -119,7 +119,7 @@ class AuthService {
         userProvider.setUser(userData);
       }
     } catch (e) {
-      showSnackBar(context, e.toString());
+      showSnackBar(context, e.toString(), status: 0);
     }
   }
 }
