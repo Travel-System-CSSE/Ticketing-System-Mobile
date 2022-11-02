@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:provider/provider.dart';
+import 'package:ticketing_system/providers/credit_provider.dart';
 import 'package:ticketing_system/providers/user_provider.dart';
 import 'package:ticketing_system/screens/signup_screen.dart';
 import 'package:ticketing_system/services/auth_services.dart';
@@ -17,6 +18,9 @@ Future main() async {
       providers: [
         ChangeNotifierProvider(
           create: (_) => UserProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => CreditProvider(),
         ),
       ],
       child: const MyApp(),

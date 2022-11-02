@@ -1,13 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
+import 'package:ticketing_system/providers/credit_provider.dart';
+import 'package:ticketing_system/services/credit_services.dart';
 import 'package:ticketing_system/utils/colors.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  void getBalance(BuildContext context) {
+    CreditService().getBalance(context);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getBalance(context);
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final balance = Provider.of<CreditProvider>(context).balance;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home'),
@@ -53,7 +73,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 6),
                     Text(
-                      'Rs.1000.00',
+                      'Rs.$balance.00',
                       style: GoogleFonts.urbanist(
                         color: buttonColor,
                         fontSize: 24,
